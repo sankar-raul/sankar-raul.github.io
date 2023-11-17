@@ -6,10 +6,10 @@ Hey there! I'm Sankar Raul, and this is my GitHub Pages repository, where I show
 ## Projects
 
 1. **Calculator**
-   - Dive into the [calculator project](calculator/) and explore some cool computations.
+   - Dive into the [calculator project](https://sankar-coding.github.io/calculator/) and explore some cool computations.
 
 2. **Clock**
-   - Discover the [clock project](clock/) and see how I've implemented timekeeping.
+   - Discover the [clock project](https://sankar-coding.github.io/clock/) and see how I've implemented timekeeping.
 
 3. **Twitter Clone**
    - Check out my take on [Twitter](https://sankar-coding.github.io/cloneProjects/twitter/) and its functionalities.
