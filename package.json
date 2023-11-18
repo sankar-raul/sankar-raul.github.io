@@ -1,0 +1,14 @@
+{
+  "name": "sankar-coding.github.io",
+  "version": "1.0.0",
+  "description": "Hey there! I'm Sankar Raul, and this is my GitHub Pages repository, where I showcase my coding projects and endeavors.",
+  "main": "node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sankar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
