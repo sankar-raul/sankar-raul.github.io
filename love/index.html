@@ -1,0 +1,108 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title></title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-... (integrity hash)" crossorigin="anonymous" />
+    <style type="text/css" media="all">
+        body {
+            background: linear-gradient(90deg, hsla(0, 100%, 67%, 1) 0%, hsla(0, 100%, 89%, 1) 100%);
+            text-align: center;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #FFF;
+            font-family: cursive;
+            font-weight: 900;
+            z-index: 26;
+            font-family: 10px;
+            animation: anim 3s linear infinite;
+        }
+         #big {
+            font-size: 12rem;
+            text-shadow: 5px 3px 6px rgba(255,154,168,9);
+            z-index: -22;
+            color: rgba(255,255,255,.2);
+            animation: anim 3s linear infinite;
+
+         }
+         #anim {
+             position: fixed;
+             font-size: 90px;
+            text-shadow: 5px 3px 6px rgba(255,154,168,9);
+            z-index: -22;
+            color: rgba(255,255,255,.2);
+            animation: anim 3s linear infinite;
+            animation:  flash 4s linear infinite;
+         }
+         #anim:nth-child(2) {
+             left: 20%;
+             animation-delay: 1s;
+         }
+                  #anim:nth-child(3) {
+             left: 40%;
+             animation-delay: 2s;
+         }
+                  #anim:nth-child(4) {
+             left: 60%;
+             animation-delay: 4s;
+         }
+                  #anim:nth-child(5) {
+             left: 80%;
+             animation-delay: 1.5s;
+         }
+          #anim:nth-child(6) {
+             left: 0%;
+             animation-delay: 2s;
+         }
+                  #anim:nth-child(7) {
+             left: 20%;
+             animation-delay: 3s;
+         }
+                  #anim:nth-child(8) {
+             left: 40%;
+             animation-delay: 2s;
+         }
+                  #anim:nth-child(9) {
+             left: 60%;
+             animation-delay: 3s;
+         }
+                  #anim:nth-child(10) {
+             left: 80%;
+             animation-delay: 3.5s;
+         }
+         @keyframes anim {
+             0%,100% {
+                 transform: scale(.8);
+             } 50% {
+                 transform: scale(1.2);
+             }
+         }
+         @keyframes flash {
+             0% {
+                 top: -10%;
+             } 100% {
+                 top: 120%;
+             }
+         }
+    </style>
+</head>
+<body>
+        <i id="anim" class="fas fa-heart"></i>
+                <i id="anim" class="fas fa-heart"></i>
+                        <i id="anim" class="fas fa-heart"></i>
+                                <i id="anim" class="fas fa-heart"></i>
+                                        <i id="anim" class="fas fa-heart"></i>
+                <i id="anim" class="fas fa-heart"></i>
+                <i id="anim" class="fas fa-heart"></i>
+                        <i id="anim" class="fas fa-heart"></i>
+                                <i id="anim" class="fas fa-heart"></i>
+                                        <i id="anim" class="fas fa-heart"></i>
+    <i id="big" class="fas fa-heart"></i>
+        <h1>I Love you SONA</h1>
+</body>
+</html>
