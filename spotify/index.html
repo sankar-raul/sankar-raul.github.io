@@ -7,7 +7,7 @@
 </head>
 <body>
     <p id="trackInfo"></p>
-
+    <script src="./script.js"></script>
     <script type="text/javascript" charset="utf-8">
         // Replace '5BKKKNwrebowaMoUdBaNby' with the actual track ID
         var trackId = '5BKKKNwrebowaMoUdBaNby';
@@ -15,13 +15,7 @@
         // Spotify API endpoint for retrieving track information
         var apiUrl = 'https://api.spotify.com/v1/tracks/' + trackId;
 
-        const got = require('got');
-
-got("https://www.google.com/index.html").then(result => {
-    alert.log(result);
-}).catch(err => {
-    alert.log(err);
-});
+        Get();
     </script>
 </body>
 </html>
