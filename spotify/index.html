@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Track Info</title>
+</head>
+<body>
+    <p id="trackInfo"></p>
+
+    <script type="text/javascript" charset="utf-8">
+        // Replace '5BKKKNwrebowaMoUdBaNby' with the actual track ID
+        var trackId = '5BKKKNwrebowaMoUdBaNby';
+
+        // Spotify API endpoint for retrieving track information
+        var apiUrl = 'https://api.spotify.com/v1/tracks/' + trackId;
+
+        const got = require('got');
+
+got("https://www.google.com/index.html").then(result => {
+    alert.log(result);
+}).catch(err => {
+    alert.log(err);
+});
+    </script>
+</body>
+</html>
