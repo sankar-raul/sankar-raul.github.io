@@ -313,21 +313,48 @@
              position: fixed;
              width: 100%;
              height: 10%;
-             padding: 14px 0px;
+             padding: 2% 0%;
              display: grid;
-             grid-template-columns: repeat(4,15%);
-             background: blue;
-             justify-content: space-around;
+             grid-template-columns: repeat(4,20%);
+             justify-content: center;
              z-index: 10;
-             grid-column-gap: 3px;
+             grid-column-gap: 1%;
              
           }
           .contact > div {
-              background: red
-              
-          }
-          .github {
               text-align: center;
+              font-size: 1.5rem;
+              display: grid;
+              aspect-ratio: 1 / 1;
+              align-items: center;
+              border-radius: 50%;
+              transition: .5s;
+             
+          }
+          .contact  div > i {
+              padding-top: 0px;
+          }
+          .contact > div > div:hover {
+              text-shadow: 0px 1px 5px rgba(25,255,255,1);
+          }
+          .contact > div > div:before {
+              transition: .5s;
+              content: '';
+              aspect-ratio: 1 / 1;
+              position: absolute;
+              width: 18%;
+              top: 6%;
+              transform: translate(-35%);
+              z-index: -1;
+              border-radius: 50%;
+          }
+     .contact > div > div:hover::before {
+            background: linear-gradient(rgba(255,255,255,.1),transparent);
+            transform: ;
+            backdrop-filter: blur(15px);
+          }
+          .username {
+              font-size: 10px;
           }
           @keyframes flash {
               0%,100% {
@@ -361,17 +388,28 @@
     </div>
     <div class="contact">
         <div class="facebook">
-            
+            <div onclick="goto('https://www.facebook.com/nishikanto.raul?mibextid=ZbWKwL')">
+            <i class="fab fa-facebook"></i>
+            <p class="username">Sankar Raul</p>
+            </div>
         </div>
         <div class="github">
+            <div onclick="goto('https://github.com/sankar-coding')">
             <i class="fab fa-github"></i>
-
+           <p class="username">sankar-coding</p>
+           </div>
         </div>
         <div class="instagram">
-            
+            <div onclick="goto('https://www.instagram.com/raul_sankar/')">
+            <i class="fab fa-instagram"></i>
+            <p class="username">Sankar Raul</p>
+            </div>
         </div>
         <div class="LinkedIn">
-            
+            <div onclick="goto('https://www.linkedin.com/in/sankar-raul-1343a0282?trk=contact-info')">
+           <i class="fab fa-LinkedIn"></i>
+           <p class="username">LinkedIn</p>
+           </div>
         </div>
     </div>
     <section class="bg">
@@ -1290,7 +1328,9 @@
                         break;
                 }
             }
-            alert("This page is now in under construction!");
+    function goto(url) {
+        window.open(url);
+    }
         </script>
     </body>
 </html>
