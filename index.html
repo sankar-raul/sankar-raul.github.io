@@ -393,29 +393,29 @@
         }
 @keyframes flash {
             0%,100% {
-                left: 0%;
-                top: 0%;
+                left:-10%;
+                top: -10%;
             }
 
             25% {
-                left: 90%;
-                top: 0%;
+                left: 70%;
+                top: -10%;
             }
 
             50% {
-                left: 90%;
+                left: 70%;
                 top: 75%;
             }
 
             74% {
-                left: 0%;
-                top: 80%;
+                left: -10%;
+                top: 75%;
             }
         }
         .flash {
             position: fixed;
-            width: 20%;
-            height: 30%;
+            width: 40%;
+            height: 33%;
             background: linear-gradient(0deg,blue,cyan);
             animation: flash 7s linear infinite;
             z-index: 0;
