@@ -11,9 +11,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>HOME | Sankar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-... (integrity hash)" crossorigin="anonymous" />
-
+   <link rel="preload" href="res/main-cursor.png"/>
+   <link rel="preload" href="res/click.png"/>
     <style type="text/css">
         html,body {
+            cursor: url(res/main-cursor.png), auto;
             margin: 0;
             padding: 0;
             color: #ddd;
@@ -53,6 +55,7 @@
             margin-left: 1px;
         }
         .hexagon {
+            cursor: none;
             position: relative;
             aspect-ratio: 10 / 11;
             height: 110px;
@@ -157,7 +160,31 @@
                 width: 25%;
                 margin: 6px;
             }
+        .main {
+            border-radius: 100%;
+            transition: 2s;
+            width: 250px;
+            animation: get-noticed 1s infinite;
+            animation-delay: 2s;
+            height: 250px;
         }
+        .main:hover {
+            border-radius: 8px;
+            height: 70vh;
+            width: 80vw;
+            animation: fake;
+        }
+        }
+@keyframes fake {
+    /* fake animation */
+}
+@keyframes get-noticed {
+    0%,100% {
+        transform: scale(.8) translate(-50%,-50%);
+    } 50% {
+        transform: scale(1.1) translate(-50%,-50%);
+    }
+}
 @media (max-width: 400px) {
             .ov {
                 margin-top: -28px;
@@ -193,6 +220,7 @@
             background: transparent;
         }
         .mp {
+            cursor: url(res/click.png), auto;
             min-height: 20px;
             border: 1px solid transparent;
             animation: animate 4s linear infinite;
@@ -311,7 +339,10 @@
             box-shadow: 3px 4px 9px black;
             border-radius: 4px;
             text-shadow: 0px 3px 4px #555;
-
+            transition: 2s;
+        }
+        .links h2:hover {
+            border-radius: 50%;
         }
         .contact {
             position: fixed;
@@ -398,12 +429,20 @@
         }
         .inline-link {
             text-decoration: none;
-            color: #ddd;
-            transition: 1s;
+            text-decoration: underline #ddd;
+            color: #eee;
+            transition: .5s;
         }
         .inline-link:hover {
             text-decoration: underline #fff;
+            color: #fff;
+            cursor: pointer;
             font-weight: 900;
+        }
+        .inline-link:active {
+            color: #ddd;
+            border: 1px solid cyan;
+            border-radius: 12px;
         }
     </style>
 </head>
