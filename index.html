@@ -16,7 +16,7 @@
         html,body {
             margin: 0;
             padding: 0;
-            color: #fff;
+            color: #ddd;
             overflow: hidden;
         }
 
@@ -44,7 +44,7 @@
         }
         .row {
             display: inline-flex;
-            margin-top: -28px;
+            margin-top: -30px;
             margin-left: -50px;
             overflow: hidden;
 
@@ -108,7 +108,7 @@
             justify-content: space-around;
             border-radius: 4px;
             overflow-y: scroll;
-            border: 1px solid #0f0;
+            border: 1px solid #333;
             animation: animate 4s linear infinite;
         }
         .mm {
@@ -117,7 +117,7 @@
             padding: 10px;
             animation: animate 4s linear infinite;
             border-radius: 4px;
-            border: 1px solid #0f0;
+            border: 1px ridge #333;
             overflow: scroll;
             font-size: 16px;
         }
@@ -390,6 +390,21 @@
             animation: flash 7s linear infinite;
             z-index: 0;
             border-radius: 100%;
+        }
+        .title {
+            position: sticky;
+            top: 0px;
+            z-index: 4;
+            backdrop-filter: blur(5px);
+        }
+        .inline-link {
+            text-decoration: none;
+            color: #ddd;
+            transition: 1s;
+        }
+        .inline-link:hover {
+            text-decoration: underline #fff;
+            font-weight: 900;
         }
     </style>
 </head>
@@ -935,7 +950,7 @@
 
                 "I am a 1st-semester BCA student at EIILM-Kolkata College. As a passionate learner in the field of computer applications, I've embarked on this journey to gain practical experience and hone my web development skills.<br><br>
 
-                These web links represent my initial projects, reflecting my dedication to learning and creating in the digital realm. I'm excited to share my progress with you and look forward to the adventures that lie ahead in my academic and web development pursuits.
+                These web links represent my initial <a class="inline-link" target="_blank" href="https://github.com/sankar-coding">projects</a>, reflecting my dedication to learning and creating in the digital realm. I'm excited to share my progress with you and look forward to the adventures that lie ahead in my academic and web development pursuits.
                 <br><br>
                 Thank you for taking the time to explore my work, and your support means a lot to me as I continue on this exciting path."
                 <p class="name">
@@ -943,7 +958,7 @@
                 </p>
             </p>
         </div>
-        <div class="break links">
+        <div id="links" class="break links">
             <h2 class="greethead title">My Web Projects Links</h2><br>
             <div class="projects">
                 <div class="mp" onclick="redirect(this)">
