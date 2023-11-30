@@ -1368,14 +1368,13 @@
             }, 3500);
 
             function redirect(name) {
-                let calculator = "./calculator/";
-                let twitter = "./cloneProjects/twitter/";
-                let yt = "./youtube/";
-                let login = "./login/";
-                let coming = "#";
-                let clock = "./clock/";
-                let simpleC = "./calculatorui/";
-                var check = name.innerText;
+                const calculator = "./calculator/";
+                const twitter = "./cloneProjects/twitter/";
+                const yt = "./youtube/";
+                const login = "./login/";
+                const clock = "./clock/";
+                const simpleC = "./calculatorui/";
+                const check = name.innerText;
                 switch (check) {
                     case "Calculator":
                         window.open(calculator);
@@ -1396,8 +1395,7 @@
                         window.open(simpleC);
                         break;
                     default:
-                        window.location.href = coming;
-                        break;
+                        console.log("Coming soon!");
                 }
             }
             function goto(url) {
