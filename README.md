@@ -31,7 +31,7 @@ Hey there! I'm Sankar Raul, and this is my GitHub Pages repository, where I show
      ```
      node node.js
      ```
-   - After running the command, you can access the local server at http://localhost:3000.
+   - After running the command, you can access the local server at http://localhost:8080.
 
 Feel free to navigate through my projects and files, and don't hesitate to connect or reach out for collaboration opportunities.
 
