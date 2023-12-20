@@ -743,7 +743,7 @@
                     if (uploadimage == "none") {
                         dynamicContent.innerHTML = `<div class="content">
                         <div class="user-pic">
-                        <img src="${userPicUrl}" alt="${user}" class="pic p1" />
+                        <img src="${userPicUrl}" alt="${name}" class="pic p1" />
                         </div>
                         <div class="c1">
                         <span class="creator">${name}</span><img class="varify" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/768px-Twitter_Verified_Badge.svg.png" width="15px" />
@@ -762,7 +762,7 @@
                         dynamicContent.innerHTML = `            <span class="with-image">
                         <div class="content">
                         <div class="user-pic">
-                        <img src="${userPicUrl}" alt="${user}" class="pic p1" />
+                        <img src="${userPicUrl}" alt="${name}" class="pic p1" />
                         <div class="col"><span></span>
                         <span></span>
                         </div>
@@ -772,7 +772,7 @@
                         <span class="creator">${name}</span><img class="varify" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/768px-Twitter_Verified_Badge.svg.png" width="15px" />
                         <span class="user-id">${userId} </span><span class="time">${time}</span><span class="more"><img src="https://i.ibb.co/Mgt5fb4/dots.png"></span><br><div class="info">
                         <span class="caption"></span></div>
-                        <div class="image"><img src="${uploadimage}"alt="${user}'s pic"></div>
+                        <div class="image"><img src="${uploadimage}"alt="${name}'s pic"></div>
                         <div class="actions">
                         <span class="action comment"> <img src="https://i.ibb.co/tmGgcwd/chat.png" class="commentPng"><span class="cc">${comments}</span></span>
                         <span class="action repost"><img height="18px" width="16px" src="https://i.ibb.co/GtCb2QR/icons8-retweet-48.png"><span class="rc">${retweets}</span></span>
@@ -785,7 +785,7 @@
 
                         <div class="content forImage">
                         <div class="user-pic">
-                        <img src="${userPicUrl}" class="pic p1" />
+                        <img src="${userPicUrl}" alt="${name}'s photo" class="pic p1" />
 
                         </div>
 
@@ -809,7 +809,7 @@
                         <span class="with-image">
                         <div class="content">
                         <div class="user-pic">
-                        <img src="${userPicUrl}" alt="${user}'s photo" class="pic p1" />
+                        <img src="${userPicUrl}" alt="${name}'s photo" class="pic p1" />
 
                         </div>
 
@@ -817,7 +817,7 @@
                         <span class="creator">${name}</span><img class="varify" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/768px-Twitter_Verified_Badge.svg.png" width="15px" />
                         <span class="user-id">${userId} </span><span class="time">${time}</span><span class="more"><img src="https://i.ibb.co/Mgt5fb4/dots.png"></span><br><div class="info">
                         <span class="caption">${caption}</span></div>
-                        <div class="image"><img alt="${user}'s post" src="${uploadimage}"></div>
+                        <div class="image"><img alt="${name}'s post" src="${uploadimage}"></div>
                         <div class="actions">
                         <span class="action comment"> <img src="https://i.ibb.co/tmGgcwd/chat.png" class="commentPng"><span class="cc">${comments}</span></span>
                         <span class="action repost"><img height="18px" width="16px" src="https://i.ibb.co/GtCb2QR/icons8-retweet-48.png"><span class="rc">${retweets}</span></span>
