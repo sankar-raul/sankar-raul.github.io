@@ -1,4 +1,4 @@
-# sankar-coding.github.io
+# [sankar-coding.github.io](https://sankar-coding.github.io/)
 # Welcome to My Coding Journey
 
 Hey there! I'm Sankar Raul, and this is my GitHub Pages repository, where I showcase my coding projects and endeavors.
