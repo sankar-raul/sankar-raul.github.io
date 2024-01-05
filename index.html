@@ -584,7 +584,7 @@
      
             const playmusic = document.getElementById("bgMusic");
             var body1 = document.querySelector("body");
-            playmusic.src = (window.location.href.includes('sankar-coding') || window.location.href.includes('localhost:3000'))?"res/bg.mp3": "https://sankar-coding.github.io/res/bg.mp3";
+            playmusic.src = "/res/bg.mp3";
             body1.addEventListener("dblclick", function() {
                 if (!playmusic.paused) {
                     playmusic.pause();
