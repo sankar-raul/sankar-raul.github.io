@@ -46,14 +46,13 @@
             margin-left: 3px;
             margin-right: 3px;
             margin-bottom: 3px;
-            transition: .1s;
+            transition: 0s;
 
         }
         .input:active {
             outline: 0px solid cyan;
             background: rgba(832, 284, 255, .155);
             box-shadow: inset 0px 10px 18px rgba(0, 0, 0, .5);
-            text-shadow: 0px -40px 0px rgba(255,255,255,.7);
         }
         .input:hover {
             color: azure;
@@ -66,8 +65,8 @@
         }
 
         .all-body {
-            border: #717377 1px solid;
-            box-shadow: 0px 3px 15px rgba(120, 121, 123,.8);
+            border: #7173 1px solid;
+            box-shadow: 0px 0px 19px 2px #0006;
             padding: 4px;
             border-radius: 16px;
             margin-top: 8px;
@@ -102,9 +101,18 @@
             border: 1px solid transparent;
             margin-top: 3px;
             text-align: right;
-            padding: 4px;
+            padding: 6px;
             outline: none;
-
+            animation: sho .3s linear;
+            height: 45px;
+        }
+        @keyframes sho() {
+            from {
+                opacity: 0;
+                color: red;
+            } to {
+                opacity: 1;
+            }
         }
         #hidden {
             top: -308870rem;
@@ -153,15 +161,16 @@
         .name {
             font-family: cursive;
             font-weight: 700;
+            color: #fee;
         }
 @keyframes myAnimation {
             0%,100% {
                 text-shadow: 0px 0px 5px white, 0px 0px 7px blue, 0px 0px 10px cyan;
-                filter: hue-rotate(0deg);
+                filter: hue-rotate(0deg) contrast(80%);
             }
             50% {
                 text-shadow: 0px 0px 5px white, 0px 0px 7px red, 0px 0px 10px blue;
-                filter: hue-rotate(360deg);
+                filter: hue-rotate(360deg) contrast(180%);;
             }
         }
         #creator {
@@ -297,7 +306,7 @@
             #00ff80 100%
             );
 
-            transform: rotate(-10deg);
+            transform: rotate(0deg);
 
         }
         #feeds:hover {
@@ -489,11 +498,12 @@
             <div>
                 <span onclick="speak()" class="speak" id="speak"></span>
                 <input value="" id="output" readonly placeholder="0" /> <br />
-                <textarea id="preview" value="" placeholder="0" readonly></textarea>
-            </div>
-            <div id="max">
+                <div id="max">
                 <span id="mtext">Maximum length reached</span>
             </div>
+                <p id="preview" >0</p>
+            </div>
+
             <div id="input-panel">
 
                 <div>
@@ -673,6 +683,7 @@ function errorCallback(error) {
                 output.value = preview.innerHTML;
                 output1.value = output.value;
                 preview.innerHTML = "";
+                speak();
                 if (output.value.length < 8) {
                     output.style.fontSize = "80px";
                 } else if (output.value.length < 12) {
@@ -682,7 +693,10 @@ function errorCallback(error) {
                     output.style.fontSize = "30px";
                     output.style.fontWeight = "550";
                 }
-
+    if(output.value.includes('Error')) {
+        output.style.fontSize = "80px";
+        
+    }
             }
             function showO(ok) {
                 if (output.value.length < 18) {
@@ -696,13 +710,22 @@ function errorCallback(error) {
                         output.style.fontSize = "80px";
                         output.style.fontWeight = "250";
                     }
-
-                    output.value = output.value + ok.innerHTML;
-
-                    output1.value = output1.value + ok.value;
+                    
+                    
+                if (output.value.includes("Error")) {
+                    output.value = "";
+                    output1.value = "";
+                }
+                    output.value += ok.innerHTML;
+                    output1.value += ok.value;
+                    if (output.value.includes('××') || output.value.includes('÷÷') || output.value.includes('%%') || output.value.includes('--') || output.value.includes('++') || output.value.includes('..')) {
+                        preview.innerHTML = "Error";
+                        return;
+                    }
                     // alert(output1.value);
                     let check = eval(output1.value);
-                    preview.innerHTML = check;
+                    preview.innerHTML = (check == undefined)?"Error":check;
+                    
                 } else {
                     document.getElementById("max").style.display = "block";
                     var max = document.getElementById("max").style.animation = "max 3s linear 1";
