@@ -5,6 +5,9 @@
             color: #ddd;
             overflow: hidden;
         }
+        body {
+            box-sizing: border-box;
+        }
 
         .bg {
             display: flex;
