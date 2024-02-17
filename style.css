@@ -75,7 +75,7 @@
         }
 
         .hexagon:hover {
-            transition: ;
+            transition: 0s;
             background: #0f0;
             cursor: alias;
         }
