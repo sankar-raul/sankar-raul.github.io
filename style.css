@@ -53,7 +53,7 @@
             -webkit-clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
             -o-clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
             -ms-clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
-            transition: 2s;
+            transition: 0s;
         }
         .over {
             overflow-x: hidden;
