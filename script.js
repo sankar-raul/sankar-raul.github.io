@@ -52,6 +52,7 @@
                 const login = "./login/";
                 const clock = "./clock/";
                 const simpleC = "./calculatorui/";
+                const music = "https://spotify-s-music-player.vercel.app/"
                 const sys = "https://userloginsystem.onrender.com/";
                 const check = name.innerText;
                 switch (check) {
@@ -75,6 +76,8 @@
                         break;
                     case "User Login System":
                         window.open(sys);
+                    case "Music Player":
+                        window.open(music);
                     default:
                         console.log("Coming soon!");
                 }
