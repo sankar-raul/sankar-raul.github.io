@@ -4,7 +4,7 @@
 Hey there! I'm Sankar Raul, and this is my GitHub Pages repository, where I showcase my coding projects and endeavors.
 
 ## Projects
-
+ 
 1. **Calculator**
    - Dive into the [calculator project](https://sankar-coding.github.io/calculator/) and explore some cool computations.
 
