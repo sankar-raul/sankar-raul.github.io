@@ -52,7 +52,7 @@
                 const login = "./login/";
                 const clock = "./clock/";
                 const simpleC = "./calculatorui/";
-                const music = "/zotify";
+                const music = "https://sankar-coding.github.io/zotify";
                 const sys = "https://userloginsystem.onrender.com/";
                 const check = name.innerText;
                 switch (check) {
