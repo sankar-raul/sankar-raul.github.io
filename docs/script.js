@@ -50,7 +50,7 @@
                 const twitter = "./cloneProjects/twitter/";
                 const yt = "./youtube/";
                 const login = "./login/";
-                const clock = "./clock/";
+                const clock = "https://sankar-coding.github.io/analog_clock/";
                 const simpleC = "./calculatorui/";
                 const music = "https://sankar-coding.github.io/zotify";
                 const sys = "https://userloginsystem.onrender.com/";
