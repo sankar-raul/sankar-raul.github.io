@@ -47,7 +47,7 @@
 
             function redirect(name) {
                 const calculator = "https://sankar-coding.github.io/calculator_web/";
-                const twitter = "./cloneProjects/twitter/";
+                const twitter = "https://sankar-coding.github.io/twitter_clone";
                 const yt = "./youtube/";
                 const login = "./login/";
                 const clock = "https://sankar-coding.github.io/analog_clock/";
