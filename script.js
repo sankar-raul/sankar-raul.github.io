@@ -46,7 +46,7 @@
             }, 3500);
 
             function redirect(name) {
-                const calculator = "./calculator/";
+                const calculator = "https://sankar-coding.github.io/calculator_web/";
                 const twitter = "./cloneProjects/twitter/";
                 const yt = "./youtube/";
                 const login = "./login/";
