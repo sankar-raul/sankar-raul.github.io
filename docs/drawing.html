@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mouse pointer</title>
+    <style type="text/css" media="all">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html,body {
+            overflow: hidden;
+            height: 100%;
+        }
+        body {
+            overflow: hidden;
+            background: #fff;
+            animation: col 10s linear infinite;
+        }
+        @keyframes col {
+            from {
+                filter: hue-rotate(0deg);
+            } to {
+                filter: hue-rotate(360deg);
+            }
+        }
+        :root {
+            --color: #f5f5;
+        }
+        .circle {
+            position: absolute;
+            width: 20px;
+            aspect-ratio: 1 / 1;
+            background: var(--color);
+            border: 1px solid var(--color);
+            border-radius: 50%;
+            transform: translate(-50%,-50%) scale(1);
+            transition: .01s;
+            animation: anim .5s ease-out;
+        }
+        @keyframes anim {
+            from {
+                opacity: 0;
+                transform: translate(-50%,-50%) scale(2);
+            }
+            to {
+                transform: translate(-50%,-50%) scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <h1 class="text">
+        
+    </h1>
+    <script type="text/javascript" charset="utf-8">
+    if (window.innerWidth < 540) {
+    document.body.addEventListener("touchmove", (e) => {
+        let touch = e.touches[0]
+        placePoint(touch.pageX,touch.pageY)
+    })
+    }
+   else {
+    document.body.addEventListener("mousemove", (e) => {
+        placePoint(e.pageX,e.pageY)
+
+    })
+   }
+    function placePoint(x,y) {
+        let p = document.createElement("span");
+        p.classList.add("circle");
+        p.style.top = y+"px";
+        p.style.left = x+"px";
+        document.body.appendChild(p);
+       // setTimeout(() => p.remove(),450);
+    }
+    </script>
+</body>
+</html>
