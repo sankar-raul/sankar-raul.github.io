@@ -46,13 +46,13 @@
             }, 3500);
 
             function redirect(name) {
-                const calculator = "https://sankar-coding.github.io/calculator_web/";
-                const twitter = "https://sankar-coding.github.io/twitter_clone";
+                const calculator = "https://sankar-raul.github.io/calculator_web/";
+                const twitter = "https://sankar-raul.github.io/twitter_clone";
                 const yt = "./youtube/";
                 const login = "./login/";
-                const clock = "https://sankar-coding.github.io/analog_clock/";
+                const clock = "https://sankar-raul.github.io/analog_clock/";
                 const simpleC = "./calculatorui/";
-                const music = "https://sankar-coding.github.io/zotify";
+                const music = "https://sankar-raul.github.io/zotify";
                 const sys = "https://userloginsystem.onrender.com/";
                 const check = name.innerText;
                 switch (check) {
