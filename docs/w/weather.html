@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title></title>
+        <style type="text/css" media="all">
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background: #fafafa;
+            }
+            #info {
+                width: clamp(300px,80%,600px);
+                aspect-ratio: 1 / .4;
+                margin-left: auto;
+                margin-right: auto;
+                background: #fefefe;
+                border-radius: 4px;
+                box-shadow: 0px 4px 8px 2px #0001;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div id="info">
+            
+        </div>
+        
+        <script src="W.js" type="text/javascript" charset="utf-8">
+            
+        </script>
+        <script src="location.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        async function getLoc() {
+try {
+let ok =  new Location();
+ok = await ok.getLocation()
+console.log(ok.longitude)
+let op = await getTemperature(ok.latitude,ok.longitude)
+console.log(op)
+
+} catch (err) {
+    console.log("Error ",err)
+}
+}
+getLoc()
+            
+        </script>
+  <script src="./eruda.js"></script>
+<script>eruda.init()</script>
+    </body>
+</html>
