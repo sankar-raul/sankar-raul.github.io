@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    background-image: url('./assets/bg.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+.banner {
+    width: 100%;
+    height: 100dvh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.banner .slider {
+    position: absolute;
+    width: 150px;
+    aspect-ratio: 1 / 1.6;
+    z-index: 3;
+    top: 10%;
+    left: calc(50% - 75px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autorotate 20s linear infinite;
+}
+@keyframes autorotate {
+    0% {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    } 100% {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg); 
+    }
+}
+.banner .slider .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc(((var(--position) - 1) * (360 / var(--quantity))) * 1deg))
+        translateZ(450px);
+}
+.item img {
+    filter: contrast(135%) brightness(100%);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #ffffff4f;
+    object-fit: cover;
+}
+.banner .content {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1000px, 100vw);
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 100px;
+   
+}
+.author {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.name {
+    font-family: 'Rubik Mono One';
+    color: #25283b;
+    font-size: 8rem;
+    bottom: -20px;
+    position: absolute;
+}
+.name::after {
+    position: absolute;
+    inline-size: 0 0 0 0;
+    left: 0;
+    top: 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 1px #ffffff;
+    font-weight: 200;
+    color: transparent;
+}
+.model {
+    filter: contrast(135%) brightness(106%);
+    background-size: 300px;
+    height: 70dvh;
+    width: 100%;
+    background-image: url('./assets/figure.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 130%;
+}
+@media (max-width: 600px) {
+    .name {
+        font-size: 4rem;
+        bottom: unset;
+    }
+    .banner .slider {
+        width: 100px;
+        aspect-ratio: 1 / 1.6;
+        top: 10%;
+        left: calc(50% - 50px);
+        transform: perspective(500px);
+        animation: autorotatePhone 20s linear infinite;
+    }
+    .banner .slider .item {
+        transform: 
+            rotateY(calc(((var(--position) - 1) * (360 / var(--quantity))) * 1deg))
+            translateZ(230px);
+    }
+    @keyframes autorotatePhone {
+        0% {
+            transform: perspective(500px) rotateX(-18deg) rotateY(0deg);
+        } 100% {
+            transform: perspective(500px) rotateX(-18deg) rotateY(360deg); 
+        }
+    }
+}
