@@ -18,7 +18,7 @@ Hey there! I'm Sankar Raul, and this is my GitHub Pages repository, where I show
 
 Feel free to navigate through my projects and files, and don't hesitate to connect or reach out for collaboration opportunities.
 
-[Visit My GitHub Pages](https://sankar-raul.github.io/)
+[Visit My GitHub Pages](https://sankarraul.me)
 
 ---
 
