@@ -391,6 +391,7 @@ header > .desk {
     position: absolute;
     top: 0;
     right: -70%;
+    bottom: 0;
     transition: right .5s ease;
     height: 100dvh;
     width: 60%;
