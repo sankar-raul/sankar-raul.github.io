@@ -11,17 +11,17 @@ function clickFunc(element) {
     }, 100)
 }
 document.onclick = (element) => clickFunc(element)
-// // mobike nav animation
-// const mobileNavDetails = document.querySelector('.nav-mobile details')
-// mobileNavDetails.addEventListener('toggle', () => {
-//     const list = document.querySelector('.list-mobile')
-//     const openState = () => {
-//         list.style.animation = "fade 1s ease"
-//         list.style.opacity = "1"
-//     }
-//     const notOpenState = () => {
-//         list.style.animation = "none"
-//         list.style.opacity = "0"
-//     }
-//     mobileNavDetails.open ? openState`` : notOpenState``
-// })
+
+// redirects
+const linksElements = document.querySelectorAll('.links i')
+const links = {
+    github: "https://github.com/sankar-raul",
+    facebook: "https://www.facebook.com/sankarraul.me",
+    instagram: "https://www.instagram.com/sankar_raul_",
+    linkedin: "https://www.linkedin.com/in/sankar-raul"
+}
+linksElements.forEach(item => {
+    item.onclick = () => {
+        location.href = links[item.id]
+    }
+})
