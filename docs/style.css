@@ -76,12 +76,12 @@ header > .desk {
     align-content: center;
     display: grid;
     /* border: 1px solid lime; */
-    grid-template-columns: max-content 1fr;
-    
+    grid-template-columns: max-content 1fr; 
 }
-.desk-items .nav-items {
+.desk-items  .nav-items {
     position: relative;
     color: #fffe;
+    transition: .2s color ease;
 }
 .nav-items::before {
     position: absolute;
@@ -93,6 +93,9 @@ header > .desk {
     bottom: 0;
     left: 0;
     height: 3px;
+}
+.desk-items > .nav-items:hover {
+    color: #5ce29a;
 }
 .nav-items:hover::before {
     width: 100%;
@@ -176,8 +179,15 @@ header > .desk > * {
 }
 .fas {
     color: white;
-    padding-right: 8px;
     font-size: .9rem;
+}
+.links > .fas {
+    margin-right: 8px;
+    transition: .4s color ease;
+    padding: 5px;
+}
+.links > .fas:hover {
+    color: #5cf3a2;
 }
 .links {
     padding-left: 2px;
@@ -238,6 +248,7 @@ main::before {
 :root {
     --circle-width: 60%;
     --author-img-height: 100%;
+    --author-img-width: initial;
 }
 .cir1 {
     height: var(--circle-width);
@@ -245,14 +256,35 @@ main::before {
     background: #4ED28B;
     transform: translateY(10%);
     border-radius: 50%;
+    transition: .4s height ease;
+    animation: 1s anim-at-loading ease;
 }
 .author-img {
     position: absolute;
     object-fit: contain;
     height: var(--author-img-height);
     bottom: -100px;
+    transition: .6s height ease;
+    animation: 1s animate-at-loading ease;
 }
-
+@keyframes anim-at-loading {
+    from {
+        height: calc(var(--circle-width) - 20%);
+        opacity: 0;
+        transform: translate(100%, 10%);
+    } to {
+        opacity: 1;
+        height: var(--circle-width);
+        transform: translate(0%, 10%);
+    }
+}
+@keyframes animate-at-loading {
+    from {
+        height: 10%;
+    } to {
+        height: var(--author-img-height);
+    }
+}
 
 @media screen and (min-width: 1250px) {
     :root {
@@ -268,10 +300,12 @@ main::before {
 }
 @media screen and (min-width: 825px) and (max-width: 999px){
     :root {
-        --circle-width: 70%;
+        --circle-width: 60%;
         --author-img-height: 90%;
     }
-  
+    main {
+        padding-left: 40px;
+    }
 }
 @media screen and (min-width: 600px) and (max-width: 825px) {
     :root {
@@ -282,7 +316,6 @@ main::before {
         padding-left: 30px;
     }
     .title {
-        color: #4ED28B;
         font-size: calc(1vw * 4 + 20%);
     }
     .author-name {
@@ -292,8 +325,8 @@ main::before {
 
 @media screen and (min-width: 200px) and (max-width: 760px) {
     :root {
-        --circle-width: 80%;
-        --author-img-height: 120%;
+        --circle-width: 100%;
+        --author-img-height: 130%;
     }
     main {
         padding-left: 30px;
