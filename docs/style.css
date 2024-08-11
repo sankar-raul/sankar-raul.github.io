@@ -69,7 +69,7 @@ header {
     grid-template-columns: 1fr;
     align-items: end;
     backdrop-filter: blur(13px);
-    background: linear-gradient(0deg, transparent 40%, #4ED28B55);
+    background: linear-gradient(0deg, transparent 40%, #0b7d4054);
     font-size: 1.1rem;
 }
 header > .desk {
